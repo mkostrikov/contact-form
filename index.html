@@ -12,96 +12,143 @@
     <link rel="stylesheet" href="/src/styles/main.scss" />
   </head>
   <body>
-    <form class="b-form b-form--theme-green" action="#">
-      <header class="b-form__header">
-        <h2>Contact Us</h2>
-      </header>
-      <section class="b-form__elements">
-        <p class="b-form-row b-form-row--input-text b-form-row--required">
-          <input
-            type="text"
-            name="first-name"
-            id="first-name"
-            autocomplete="given-name"
-            aria-describedby="first-name-error"
-            aria-invalid="true"
-            required
-          />
-          <label for="first-name">First Name</label>
-          <span id="first-name-error" class="b-form-row__error-message">
-            This field is required
-          </span>
-        </p>
+    <main class="l-main">
+      <form class="b-form b-form--theme-green" action="#">
+        <header class="b-form__header">
+          <h2>Contact Us</h2>
+        </header>
+        <section class="b-form__elements">
+          <p class="b-form-row b-form-row--input-text b-form-row--required">
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              autocomplete="given-name"
+              aria-describedby="first-name-error"
+              aria-invalid="true"
+              required
+            />
+            <label for="first-name">First Name</label>
+            <span id="first-name-error" class="b-form-row__error-message">
+              This field is required
+            </span>
+          </p>
 
-        <p class="b-form-row b-form-row--input-text b-form-row--required">
-          <input
-            type="text"
-            name="last-name"
-            id="last-name"
-            autocomplete="family-name"
-            aria-describedby="last-name-error"
-            aria-invalid="true"
-            required
-          />
-          <label for="last-name">Last Name</label>
-          <span id="last-name-error" class="b-form-row__error-message">
-            This field is required
-          </span>
-        </p>
+          <p class="b-form-row b-form-row--input-text b-form-row--required">
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              autocomplete="family-name"
+              aria-describedby="last-name-error"
+              aria-invalid="true"
+              required
+            />
+            <label for="last-name">Last Name</label>
+            <span id="last-name-error" class="b-form-row__error-message">
+              This field is required
+            </span>
+          </p>
 
-        <p class="b-form-row b-form-row--input-text b-form-row--required">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            autocomplete="email"
-            aria-describedby="email-error"
-            aria-invalid="true"
-            required
-          />
-          <label for="email">Email Address</label>
-          <span id="email-error" class="b-form-row__error-message">
-            Please enter a valid email address
-          </span>
-        </p>
+          <p class="b-form-row b-form-row--input-text b-form-row--required">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autocomplete="email"
+              aria-describedby="email-error"
+              aria-invalid="true"
+              required
+            />
+            <label for="email">Email Address</label>
+            <span id="email-error" class="b-form-row__error-message">
+              Please enter a valid email address
+            </span>
+          </p>
 
-        <p class="b-form-row b-form-row--input-text b-form-row--required">
-          <textarea
-            name="message"
-            id="message"
-            rows="8"
-            autocomplete="off"
-            minlength="1"
-            aria-describedby="message-error"
-            aria-invalid="true"
-            required
-          ></textarea>
-          <label for="message">Message</label>
-          <span id="message-error" class="b-form-row__error-message">
-            This field is required
-          </span>
-        </p>
-      </section>
+          <fieldset
+            class="b-form-group b-form-group--row-radio b-form-group--required"
+          >
+            <legend>Query Type</legend>
 
-      <footer class="b-form__footer">
-        <p class="b-form-row b-form-row--input-checkbox b-form-row--required">
-          <input
-            class="b-checkbox"
-            type="checkbox"
-            name="approval"
-            id="approval"
-            aria-describedby="approval-error"
-            aria-invalid="true"
-            required
-          />
-          <label for="approval">I consent to being contacted by the team</label>
-          <span id="approval-error" class="b-form-row__error-message">
-            To submit this form, please consent to being contacted
-          </span>
-        </p>
+            <ul class="b-form-group__list">
+              <li class="b-form-group__item">
+                <label for="query-type">
+                  <span>General Enquiry</span>
 
-        <button>Submit</button>
-      </footer>
-    </form>
+                  <input
+                    class="b-input-radio"
+                    type="radio"
+                    name="query-type"
+                    id="query-type"
+                    aria-describedby="query-type-error"
+                    aria-invalid="true"
+                    required
+                  />
+                </label>
+              </li>
+
+              <li class="b-form-group__item">
+                <label for="query-type-1">
+                  <span>Support Request</span>
+
+                  <input
+                    class="b-input-radio"
+                    type="radio"
+                    name="query-type"
+                    id="query-type-1"
+                  />
+                </label>
+              </li>
+            </ul>
+
+            <span id="query-type-error" class="b-form-group__error-message">
+              Please select a query type
+            </span>
+          </fieldset>
+
+          <p class="b-form-row b-form-row--input-text b-form-row--required">
+            <textarea
+              name="message"
+              id="message"
+              rows="8"
+              autocomplete="off"
+              minlength="1"
+              aria-describedby="message-error"
+              aria-invalid="true"
+              required
+            ></textarea>
+            <label for="message">Message</label>
+            <span id="message-error" class="b-form-row__error-message">
+              This field is required
+            </span>
+          </p>
+        </section>
+
+        <footer class="b-form__footer">
+          <p class="b-form-row b-form-row--input-checkbox b-form-row--required">
+            <input
+              class="b-checkbox"
+              type="checkbox"
+              name="approval"
+              id="approval"
+              aria-describedby="approval-error"
+              aria-invalid="true"
+              required
+            />
+            <label for="approval"
+              >I consent to being contacted by the team</label
+            >
+            <span id="approval-error" class="b-form-row__error-message">
+              To submit this form, please consent to being contacted
+            </span>
+          </p>
+
+          <button class="b-form__btn">
+            <span>Submit</span>
+          </button>
+        </footer>
+      </form>
+    </main>
   </body>
 </html>

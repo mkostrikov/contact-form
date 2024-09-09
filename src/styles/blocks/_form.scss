@@ -1,10 +1,9 @@
 @use "../tools/" as t;
 
 .b-form {
-  margin: 20px;
   padding: 24px;
   border-radius: 16px;
-  background-color: pink;
+  background-color: #fff;
   display: grid;
   grid-template-rows: [header] auto 32px [elements] auto 40px [footer] auto;
   color: var(--text-color, #000);
@@ -12,6 +11,7 @@
   &--theme-green {
     --inactive-color: #86a2a5;
     --accent-color: #0c7d69;
+    --second-color: #e0f1e8;
     --error-color: #d73c3c;
     --border-radius: 8px;
     --text-color: #2a4144;
@@ -28,6 +28,7 @@
   &__elements {
     grid-row: elements;
     display: grid;
+    align-items: start;
     gap: 24px 16px;
   }
 
@@ -35,5 +36,42 @@
     grid-row: footer;
     display: grid;
     gap: 40px;
+  }
+
+  &__btn {
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: grid;
+  }
+
+  &__btn > span {
+    padding: 16px 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+  }
+
+  @include t.breakpoint(s) {
+    &__elements {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__elements :nth-child(n + 3) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (hover: hover) {
+    &__btn:hover > span {
+      backdrop-filter: brightness(60%);
+    }
+  }
+
+  @media (hover: none) {
+    &__btn:active > span {
+      backdrop-filter: brightness(60%);
+    }
   }
 }

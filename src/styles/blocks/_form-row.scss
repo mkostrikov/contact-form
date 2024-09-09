@@ -5,6 +5,10 @@
 
   & > label {
     grid-area: label;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
   }
 
   & > :is(input, textarea):user-invalid ~ &__error-message {
@@ -44,6 +48,10 @@
     border: 2px solid var(--inactive-color);
     border-radius: var(--border-radius);
     padding: 12px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--text-color);
   }
 
   &--input-text > :is(input, textarea):user-invalid {
