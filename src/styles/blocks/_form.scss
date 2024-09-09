@@ -70,6 +70,10 @@
   }
 
   @include t.breakpoint(s) {
+    & {
+      padding: 40px;
+    }
+
     &__elements {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
