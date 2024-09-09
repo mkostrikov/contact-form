@@ -14,8 +14,4 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-
-  &:focus-visible {
-    outline: 4px solid var(--accent-color, #000);
-  }
 }

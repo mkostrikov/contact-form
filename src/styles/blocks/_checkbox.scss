@@ -8,15 +8,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80%;
-  background-color: fff;
-  border: 2px solid var(--inactive--color, #000);
+  background-color: #fff;
+  border: 2px solid var(--inactive-color, #000);
 
   &:checked {
     background-color: var(--accent-color, #000);
     border: 2px solid var(--accent-color, #000);
-  }
-
-  &:focus-visible {
-    outline: 4px solid var(--accent-color, #000);
   }
 }
