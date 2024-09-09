@@ -15,6 +15,12 @@
     --error-color: #d73c3c;
     --border-radius: 8px;
     --text-color: #2a4144;
+    --focus-color: #000;
+  }
+
+  & :is(input, textarea, button):focus-visible {
+    outline: 4px solid var(--focus-color);
+    outline-offset: -2px;
   }
 
   &__header {

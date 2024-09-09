@@ -52,6 +52,7 @@
     font-size: 18px;
     line-height: 1.5;
     color: var(--text-color);
+    cursor: pointer;
   }
 
   &--input-text > :is(input, textarea):user-invalid {
@@ -64,5 +65,11 @@
       "error error";
     grid-template-columns: auto minmax(0, 1fr);
     gap: 0 16px;
+  }
+
+  @media (hover: hover) {
+    &--input-text > :is(input, textarea):hover {
+      border: 2px solid var(--accent-color);
+    }
   }
 }

@@ -37,6 +37,7 @@
     font-size: 18px;
     line-height: 1.5;
     color: var(--text-color);
+    cursor: pointer;
   }
 
   &--row-radio &__item > label > span {
@@ -45,6 +46,7 @@
 
   &--row-radio &__item > label > input {
     grid-area: input;
+    cursor: pointer;
   }
 
   &--row-radio &__item > label:has(input:checked) {
@@ -61,6 +63,12 @@
   @include t.breakpoint(s) {
     &__list {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (hover: hover) {
+    &--row-radio &__item > label:hover {
+      border: 2px solid var(--accent-color);
     }
   }
 }
