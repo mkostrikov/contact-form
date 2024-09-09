@@ -14,6 +14,10 @@
     grid-row: 1;
   }
 
+  & > form {
+    z-index: 1;
+  }
+
   @include t.breakpoint(xs) {
     & {
       padding: 128px 40px;
