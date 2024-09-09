@@ -1,6 +1,7 @@
 @use "../tools/" as t;
 
 .l-main {
+  position: relative;
   padding: 32px 16px;
   background-color: #e0f1e8;
   min-block-size: 100dvh;
@@ -8,15 +9,6 @@
   grid-template-columns: minmax(min(343px, 100%), 736px);
   justify-content: center;
   align-content: center;
-
-  & > * {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  & > form {
-    z-index: 1;
-  }
 
   @include t.breakpoint(xs) {
     & {
