@@ -1,0 +1,22 @@
+@use "../tools/" as t;
+
+.b-checkbox {
+  appearance: none;
+  block-size: 18px;
+  inline-size: 18px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.98 5.99a1 1 0 0 0-.687.303L9 16.586l-3.293-3.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l11-11a1 1 0 0 0-.727-1.717z" fill="%23fff"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-color: fff;
+  border: 2px solid var(--inactive--color, #000);
+
+  &:checked {
+    background-color: var(--accent-color, #000);
+    border: 2px solid var(--accent-color, #000);
+  }
+
+  &:focus-visible {
+    outline: 4px solid var(--accent-color, #000);
+  }
+}
